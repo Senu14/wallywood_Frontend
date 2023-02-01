@@ -3,7 +3,7 @@ import { Reset } from "../Styled/Mixins";
 
 const PosterStyle = styled.div`
 
-         
+         flex-grow: 6 ;
 
 img {
      width: 150px;
