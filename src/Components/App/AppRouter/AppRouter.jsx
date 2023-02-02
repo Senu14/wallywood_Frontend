@@ -1,12 +1,13 @@
-import { Routes, Route } from 'react-router-dom';
-import Home from '../../../Pages/Home/Home';
-import Plakater from '../../../Pages/Plakater/Plakater';
-import Omos from '../../../Pages/Omos/Omos';
-import Kontakt from '../../../Pages/Kontakt/Kontakt';
-import Login from '../../../Pages/Login/Login';
-import Notfound from '../../../Pages/NotFound/Notfound';
-import { Movie } from '../../Movies/Movie';
 import { PostersList } from '../../Movies/PostersList';
+import Plakater from '../../../Pages/Plakater/Plakater';
+import Notfound from '../../../Pages/NotFound/Notfound';
+import Kontakt from '../../../Pages/Kontakt/Kontakt';
+import { Routes, Route } from 'react-router-dom';
+import Login from '../../../Pages/Login/Login';
+import Home from '../../../Pages/Home/Home';
+import Omos from '../../../Pages/Omos/Omos';
+import { Movie } from '../../Movies/Movie';
+
 
 
 const AppRouter = () => {
@@ -16,7 +17,7 @@ const AppRouter = () => {
              <Route index element={<Home />} />
              <Route path='/plakater' element={<Plakater />} >
              <Route index element={<PostersList />} />
-              <Route path=':id' element={<Movie />}/>
+              <Route path=":id" element={<Movie />}/>
               
               </Route>
 

@@ -3,7 +3,10 @@ import { Mixin } from "react";
 
 const FilterStyle = styled.div`
            
-               flex-grow: 2 ;
+              input{
+               width: 25px ;
+
+              } 
            
 
 `

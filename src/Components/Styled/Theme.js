@@ -1,4 +1,3 @@
-// @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap');
 export const theme = {
      colors: {
           primary: '#5C1f06',

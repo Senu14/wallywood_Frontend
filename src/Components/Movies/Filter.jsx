@@ -11,7 +11,7 @@ import FilterStyle from './FilterStyle'
                       setGenre(response.data)
                     }
                ).catch(err =>{
-                    console.log(err);
+                   
 
                })   
           }

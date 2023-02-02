@@ -1,6 +1,6 @@
 import { ContainerStyle } from './Components/Styled/Cotainer.style';
-import Header from './Components/Partials/Header';
 import AppRouter from './Components/App/AppRouter/AppRouter';
+import Header from './Components/Partials/Header';
 import Footer from './Components/Partials/Footer';
 
 
