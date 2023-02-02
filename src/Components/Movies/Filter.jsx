@@ -2,6 +2,7 @@ import React,{ useEffect, useState } from 'react'
 import axios from 'axios';
 import FilterStyle from './FilterStyle'
 
+// function til genre
  const Filter = () => {
      const [genre, setGenre] = useState([])
      useEffect(()=>{
@@ -39,7 +40,7 @@ import FilterStyle from './FilterStyle'
         </ul>
 
         <h5>Priseområde</h5>
-
+{/* input til */}
         <div>
          <input type="number" name='min' />
          <span>-</span>

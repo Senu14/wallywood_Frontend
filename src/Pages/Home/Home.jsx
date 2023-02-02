@@ -1,8 +1,12 @@
 import { ContentWrapper } from "../../Components/App/ContentWrapper/contentWrapper"
 import SlideWrapper from "../../Components/App/SlideWrapper/SlideWrapper"
+import { useFilmData } from "../../Components/App/FilmLisst/FilmList"
+
 
 
 const Home = () => {
+	const { FilmList } = useFilmData()
+	console.log(FilmList);
   return (
 	<>
 	<SlideWrapper />
