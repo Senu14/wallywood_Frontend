@@ -5,6 +5,8 @@ import PosterStyle from './Poster.style';
     
   return (
     <PosterStyle>
+
+      
    
      <img src={poster.image} alt="" />
      <p>{poster.name}</p>
@@ -13,10 +15,13 @@ import PosterStyle from './Poster.style';
           
      </p>
     <button>Læg i Kruv</button>
-
+    
+    
 
     </PosterStyle>
   )
 }
 
 export default Poster;
+
+
