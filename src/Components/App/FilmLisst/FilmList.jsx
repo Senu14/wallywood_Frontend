@@ -1,9 +1,10 @@
 import axios from 'axios'
 import { createContext, useContext, useState, useEffect} from 'react'
+
 const FilmContext = createContext()
 
-const FilmProvider = ({Children}) =>{
-      const[FilmList, setFilmList] = useState([])
+const FilmProvider = ({children}) => {
+      const [FilmList, setFilmList] = useState([])
 
       useEffect(() =>{
           if(sessionStorage.getItem ('FilmList')){
@@ -17,12 +18,12 @@ const FilmProvider = ({Children}) =>{
                getData()
           }
          
-      }, [Children]);
+      }, [children]);
 
 // Here we send variable and functions
      return (
           <FilmContext.Provider value={{FilmList, setFilmList}}>
-               {Children}
+               {children}
                </FilmContext.Provider>
                )
 }

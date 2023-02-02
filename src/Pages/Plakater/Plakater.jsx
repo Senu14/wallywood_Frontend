@@ -1,6 +1,6 @@
 import { ContentWrapper } from '../../Components/App/ContentWrapper/contentWrapper';
-import  Filter  from '../../Components/Movies/Filter';
 import FilterWrapperStyle from '../../Components/Movies/FiterWrapperStyle.js';
+import  Filter  from '../../Components/Movies/Filter';
 import { Outlet } from 'react-router-dom';
 
 

@@ -3,7 +3,7 @@ import { Mixin } from "react";
 
 
 const FilterWrapperStyle = styled.div`
-              display: flex;
+              display: grid;
               
 
 `
