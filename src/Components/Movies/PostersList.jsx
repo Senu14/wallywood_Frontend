@@ -1,6 +1,6 @@
 import PosterWrapperStyel from '../App/PosterWrapper/PosterWrapper.style';
 import { useState, useEffect } from 'react';
-import Poster from './Poster';
+import { Poster } from '../Movies/Poster';
 import axios from 'axios';
 
 export const PostersList = () => {
@@ -23,7 +23,7 @@ export const PostersList = () => {
           }
 
           fatchMovies()
-     }, [movies, posters]) 
+     }, []) 
 
    
       
