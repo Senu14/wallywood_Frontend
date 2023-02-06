@@ -8,6 +8,7 @@ import Home from '../../../Pages/Home/Home';
 import Omos from '../../../Pages/Omos/Omos';
 import { Movie } from '../../Movies/Movie';
 
+import { PosterDetails, PosterList } from '../../Movies/Poster';
 
 
 const AppRouter = () => {
