@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { createContext, useContext, useState, useEffect} from 'react'
+import Loin from '../../../Pages/Login/Login'
 
 const PosterContext = createContext()
 
@@ -14,8 +15,10 @@ const PosterProvider = ({children}) => {
                     const result = await axios.get('http://localhost:4000/poster')
                     sessionStorage.setItem('PosterList', JSON.stringify(result.data));
                     setPosterList(result.data)
+          
                }
                getData()
+               
           }
          
       }, [children]);

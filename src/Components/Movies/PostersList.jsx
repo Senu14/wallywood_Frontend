@@ -9,7 +9,7 @@ export const PostersList = () => {
 
      useEffect(()=>{
           const fatchMovies = async () =>{
-                axios.get("http://localhost:4000/poster").then( 
+                axios.get("http://localhost:4000/poster").then(  
                     response =>{
                       setMovies(response.data)
                       let items=movies.slice(0,21)

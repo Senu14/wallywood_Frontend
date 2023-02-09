@@ -1,6 +1,7 @@
-import { ContentWrapper } from "../../Components/App/ContentWrapper/contentWrapper"
-import SlideWrapper from "../../Components/App/SlideWrapper/SlideWrapper"
-import { usePosterData } from "../../Components/App/PosterNList/PosterNList"
+import { ContentWrapper } from "../../Components/App/ContentWrapper/contentWrapper";
+import { usePosterData } from "../../Components/App/PosterNList/PosterNList";
+import SlideWrapper from "../../Components/App/SlideWrapper/SlideWrapper";
+
 
 
 

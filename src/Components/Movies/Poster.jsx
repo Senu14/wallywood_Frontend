@@ -32,8 +32,9 @@ const GenreList = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const result = await axios.get('http://localhost:4000/genre')
+  const result = await axios.get('http://localhost:4000/genre')  
       setData(result.data);
+     
     }
     getData()
   }, [setData]);
@@ -58,7 +59,7 @@ const PosterList = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const result = await axios.get(`http://localhost:4000/poster/${slug}`)
+      const result = await axios.get(`http://localhost:4000/poster/${slug}`)  // error message from your axios call. 
       setData(result.data);
     }
     getData()
