@@ -30,7 +30,8 @@ const Loin = () => {
   }
 
 const Logout = () => {
-  console.log(1234)
+sessionStorage.removeItem('token')
+setLoginData('')// loginData er false nu pga.null string ('')
 }
   return (
           <ContentWrapper title="Login">
