@@ -1,5 +1,5 @@
 import { CartIconStyle } from "./CartIconStyle";
-import { ReactComponent as CartIconSVG } from '../../../Assets/svg/icon_cart.svg';
+import { ReactComponent as CartIconSVG } from '../../../Assets/Svg/icon_cart.svg';
 import { useCartData } from "../../App/Providers/CartProvider";
 
 const CartIcon = () => {

@@ -1,15 +1,12 @@
-import { PostersList } from '../../Movies/PostersList';
-import Plakater from '../../../Pages/Posters/Posters';
-import Notfound from '../../../Pages/NotFound/Notfound';
+import { Posters } from '../../Pages/Posters/Posters';
 import { Routes, Route } from 'react-router-dom';
-import Cart from '../../../Pages';
-import Home from '../../../Pages/Home/Home';
-import Login from '../../../Pages/Login/Login';
-import Notfound from '../../../Pages/Notfound/Notfound';
-import { Posters } from '../../../Pages/Posters/Posters';
-import { PosterList } from '../../../Pages/Posters/PosterList'
-import { PosterDetails } from '../../../Pages/Posters/PosterDetails'
+import Cart from '../../Pages/Cart/Cart';
+import Home from '../../Pages/Home/Home';
+import Login from '../../Pages/Login/Login';
+import Notfound from '../../Pages/NotFound/Notfound';
 
+import { PosterList } from '../../Pages/Posters/PosterList'
+import  PosterDetails  from '../../Pages/Posters/PosterDetails'
 const AppRouter = () => {
 	return (
 		<Routes>

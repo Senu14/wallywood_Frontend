@@ -1,4 +1,4 @@
-import { ContentWrapper } from "../../App/Elements/ContentWrapper/ContentWrapper";
+import { ContentWrapper } from "../../App/Elements/ContentWrapper/contentWrapper";
 import { Link } from 'react-router-dom'
 
 const Notfound = () => {

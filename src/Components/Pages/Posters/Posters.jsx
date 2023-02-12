@@ -1,4 +1,4 @@
-import { ContentWrapper } from "../../App/Elements/ContentWrapper/ContentWrapper"
+import { ContentWrapper } from "../../App/Elements/ContentWrapper/contentWrapper"
 import { PostersStyle } from './Posters.style'
 import { PosterNav } from './PosterNav'
 import { Outlet } from "react-router-dom"

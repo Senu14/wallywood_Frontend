@@ -1,4 +1,4 @@
-import { ContentWrapper } from '../../App/Elements/ContentWrapper/ContentWrapper'
+import { ContentWrapper } from '../../App/Elements/ContentWrapper/contentWrapper'
 import SlideWrapper from "../../App/Elements/SlideWrapper/SlideWrapper"
 import { useAuth } from "../../App/Providers/AuthProvider"
 
