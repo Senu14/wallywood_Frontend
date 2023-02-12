@@ -1,34 +1,28 @@
 import { PostersList } from '../../Movies/PostersList';
-import Plakater from '../../../Pages/Plakater/Plakater';
+import Plakater from '../../../Pages/Posters/Posters';
 import Notfound from '../../../Pages/NotFound/Notfound';
-import Kontakt from '../../../Pages/Kontakt/Kontakt';
 import { Routes, Route } from 'react-router-dom';
-import Login from '../../../Pages/Login/Login';
+import Cart from '../../../Pages';
 import Home from '../../../Pages/Home/Home';
-import Omos from '../../../Pages/Omos/Omos';
-import { Movie } from '../../Movies/Movie';
-
-import { PosterDetails, PosterList } from '../../Movies/Poster';
-
+import Login from '../../../Pages/Login/Login';
+import Notfound from '../../../Pages/Notfound/Notfound';
+import { Posters } from '../../../Pages/Posters/Posters';
+import { PosterList } from '../../../Pages/Posters/PosterList'
+import { PosterDetails } from '../../../Pages/Posters/PosterDetails'
 
 const AppRouter = () => {
-  return (
-      <Routes>
-
-             <Route index element={<Home />} />
-             <Route path='/plakater' element={<Plakater />} >
-             <Route index element={<PostersList />} />
-              <Route path=":id" element={<Movie />}/>
-              
-              </Route>
-
-             <Route path='*' element={<Notfound />} />
-             <Route path='/omos' element={<Omos />} />
-             <Route path='/kontakt'element={<Kontakt />} />
-             <Route path='/Login'element={<Login />} />
-
-      </Routes>
-  );
+	return (
+		<Routes>
+			<Route index element={<Home />} />
+			<Route path="/posters" element={<Posters />}>
+				<Route path=":genre" element={<PosterList />} />
+				<Route path=":genre/:poster" element={<PosterDetails />} />
+			</Route>
+			<Route path="/cart" element={<Cart />} />
+			<Route path="/login" element={<Login />} />
+			<Route path="*" element={<Notfound />} />
+		</Routes>
+	);
 }
 
 export default  AppRouter;
