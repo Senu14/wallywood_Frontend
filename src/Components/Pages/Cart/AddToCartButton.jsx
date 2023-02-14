@@ -1,10 +1,10 @@
+import axios from 'axios';
+import { useAuth } from '../../App/Providers/AuthProvider';
 import { AddToCartButtonStyle } from "./AddToCartButton.style";
-import { useAuth } from '../../App/Providers/AuthProvider'
-import axios from 'axios'
 import { useCartData } from "../../App/Providers/CartProvider";
 
 const AddToCartButton = props => {
-	const { loginData } = useAuth()
+	const { loginData } = useAuth() // This is our coustom hook Auth()
 	const { cartData, setCartData } = useCartData()
 
 

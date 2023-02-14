@@ -1,8 +1,7 @@
-/**
- * Poster Provider til browser lagring af plakat data
- */
+//Poster Provider til browser lagring af plakat data
+import axios from 'axios';
 import { createContext, useContext, useEffect, useState } from "react";
-import axios from 'axios'
+
 
 // Deklarerer context komponent
 const PosterContext = createContext()
