@@ -12,6 +12,7 @@ export const PosterList = () => {
     const getData = async () => {
       const endpoint = `http://localhost:4000/poster/list/${genre}`
       const result = await axios.get(endpoint)
+      console.log(result.data);
       setData(result.data)
     }
     getData()
@@ -34,12 +35,15 @@ export const PosterList = () => {
                 </Link>
               </p>
               <p>DKK {poster.price},00</p>
+           
               <p>
                 <AddToCartButton id={poster.id}>Læg i kurv</AddToCartButton>
               </p>
             </div>
           )
-        })}
+      }
+    )
+  }
     </PosterListStyle>
   )
 }
