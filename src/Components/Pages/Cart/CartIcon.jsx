@@ -1,14 +1,21 @@
-import { CartIconStyle } from "./CartIconStyle";
-import { ReactComponent as CartIconSVG } from '../../../Assets/Svg/icon_cart.svg';
+import { CartIconStyle } from "../../Pages/Cart/CartIconStyle";
+import { ReactComponent as IconCartSVG } from '../../../Assets/Svg/icon_cart.svg'
 import { useCartData } from "../../App/Providers/CartProvider";
+import { Link } from "react-router-dom";
 
 const CartIcon = () => {
 	const { cartData } = useCartData()
 
 	return (
 		<CartIconStyle>
-			<CartIconSVG />
-			<p>Du har {cartData.length} varer i kurven</p>
+			<Link to="/cart">
+				<IconCartSVG />
+			</Link>
+			<p>
+			<Link to="/cart">
+				Du har {cartData.length} varer i kurven
+			</Link>	
+			</p>
 		</CartIconStyle>
 	);
 }

@@ -1,6 +1,6 @@
 import { Posters } from '../../Pages/Posters/Posters';
 import { Routes, Route } from 'react-router-dom';
-import Cart from '../../Pages/Cart/Cart';
+import{ Cart } from '../Cart/Cart';
 import Home from '../../Pages/Home/Home';
 import Login from '../../Pages/Login/Login';
 import Notfound from '../../Pages/NotFound/Notfound';
