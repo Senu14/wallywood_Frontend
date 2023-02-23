@@ -6,20 +6,22 @@ import { PosterDetailsStyle } from "./PosterDetails.style"
 export const PosterDetails = () => {
   const [ data, setData ] = useState([])
   const { poster } = useParams();
+  console.log(poster);
 
-  useEffect(() => {
-    const getData = async () => {
-      const result = await axios.get(`http://localhost:4000/poster/details/${poster}`)
-      setData(result.data);
-    }
-    getData()
-  }, [poster]);
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     const result = await axios.get(`http://localhost:4000/poster/details/${poster}`)
+  //     setData(result.data);
+  //   }
+  //   getData()
+  // }, [poster]);
 
   return (
     <PosterDetailsStyle>
       <div>
         <figure>
           <img src={data.image} alt={data.name} />
+          {/* console.log(data.image); */}
         </figure>
       </div>
       <div>

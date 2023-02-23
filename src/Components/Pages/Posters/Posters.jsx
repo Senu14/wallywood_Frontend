@@ -3,6 +3,8 @@ import { PostersStyle } from './Posters.style'
 import { PosterNav } from './PosterNav'
 import { Outlet } from "react-router-dom"
 
+import { PosterList } from "./PosterList"
+
 export const Posters = () => {
   return (
     <ContentWrapper title="Plakater" description="Se vores udvalg af plakater">

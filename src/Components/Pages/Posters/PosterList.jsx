@@ -7,12 +7,19 @@ import AddToCartButton from "../Cart/AddToCartButton"
 export const PosterList = () => {
   const [data, setData] = useState([])
   const { genre } = useParams()
+  console.log(genre);
 
   useEffect(() => {
     const getData = async () => {
-      const endpoint = `http://localhost:4000/poster/list/${genre}`
+      let endpoint 
+      
+      if (genre) {endpoint = `http://localhost:4000/poster/list/${genre}`
+    }else{
+      endpoint= `http://localhost:4000/poster/list`
+    }
+     
       const result = await axios.get(endpoint)
-      console.log(result.data);
+      // console.log(result.data);
       setData(result.data)
     }
     getData()
@@ -26,7 +33,7 @@ export const PosterList = () => {
             <div key={poster.id}>
               <figure>
                 <Link to={`/posters/details/${poster.slug}`}>
-                  <img src={poster.image} alt="" />
+                <img src={poster.image} alt="" />
                 </Link>
               </figure>
               <p>

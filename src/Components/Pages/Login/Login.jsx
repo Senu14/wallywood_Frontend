@@ -1,6 +1,7 @@
 import axios from "axios"
 import { ContentWrapper } from "../../App/Elements/ContentWrapper/contentWrapper"
 import { useAuth } from "../../App/Providers/AuthProvider"
+import { FormComponantstyle } from "../../Styled/FormComponant.style"
 
 const Login = () => {
   const { loginData, setLoginData } = useAuth()
@@ -32,6 +33,7 @@ const Login = () => {
 
   return (
     <ContentWrapper title="Login">
+      <FormComponantstyle>
       {!loginData ? (
         <form method="POST">
           <div>
@@ -54,6 +56,7 @@ const Login = () => {
 			<button onClick={() => Logout()}>Log ud</button>
 		</div>
       )}
+      </FormComponantstyle>
     </ContentWrapper>
   )
 }
