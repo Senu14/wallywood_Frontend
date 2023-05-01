@@ -27,7 +27,7 @@ export const FormComponantstyle= styled.section`
 
  }
  button{
-     width: 55px;
+     width: 60px;
      border-color:${props => props.theme.colors.secondary};
      
  }

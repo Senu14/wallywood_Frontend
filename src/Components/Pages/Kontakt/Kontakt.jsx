@@ -15,7 +15,7 @@ const Kontakt = () => {
                   <input type="email" />
                   <label htmlFor="name">Din besked</label>
                   <textarea name="text" id="" cols="30" rows="10"/>
-                  <button type="submit">"Send</button>
+                  <button type="submit">Send</button>
                 </form>
           </FormComponantstyle>
           </ContentWrapper>

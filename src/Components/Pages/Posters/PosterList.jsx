@@ -1,21 +1,32 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
-import { Link, useParams } from "react-router-dom"
+import { Link, useParams, useOutletContext } from "react-router-dom";
 import { PosterListStyle } from "./PosterList.style"
 import AddToCartButton from "../Cart/AddToCartButton"
+import SorterComponant from "./SorterComponant"
 
 export const PosterList = () => {
   const [data, setData] = useState([])
   const { genre } = useParams()
-  console.log(genre);
+ 
+   const { min, max } = useOutletContext();
+
+
+  const [sort, setSort] = useState("")
+  const SortHandler = (e) => {
+    setSort(e.target.value)
+    console.log(e.target.value);
+
+
+  }
 
   useEffect(() => {
     const getData = async () => {
       let endpoint 
       
-      if (genre) {endpoint = `http://localhost:4000/poster/list/${genre}`
+      if (genre) {endpoint = `http://localhost:4000/poster/list/${genre}${sort}`
     }else{
-      endpoint= `http://localhost:4000/poster/list`
+      endpoint= `http://localhost:4000/poster/list${sort}`
     }
      
       const result = await axios.get(endpoint)
@@ -23,12 +34,18 @@ export const PosterList = () => {
       setData(result.data)
     }
     getData()
-  }, [genre])
+  }, [genre,sort])
+
+  const filterData = data
+    .filter((item) => item.price > min)
+    .filter((item) => item.price < max);
 
   return (
+    <>
+    <SorterComponant SortHandler = {SortHandler} sort = { sort} />
     <PosterListStyle>
       {data &&
-        data.map((poster) => {
+        filterData.map((poster) => {
           return (
             <div key={poster.id}>
               <figure>
@@ -52,5 +69,6 @@ export const PosterList = () => {
     )
   }
     </PosterListStyle>
+    </>
   )
 }

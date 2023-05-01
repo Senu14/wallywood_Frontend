@@ -8,6 +8,7 @@ export default function SlideWrapper() {
   return (
 	<SlideWrapperStyle>
 		<img src={require('../../../../Assets/Images/curtain.jpg')} alt="Wallywood" />
+		
 	</SlideWrapperStyle>
   )
 }

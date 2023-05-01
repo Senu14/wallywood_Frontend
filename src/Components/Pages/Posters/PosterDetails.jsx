@@ -8,13 +8,13 @@ export const PosterDetails = () => {
   const { poster } = useParams();
   console.log(poster);
 
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     const result = await axios.get(`http://localhost:4000/poster/details/${poster}`)
-  //     setData(result.data);
-  //   }
-  //   getData()
-  // }, [poster]);
+  useEffect(() => {
+    const getData = async () => {
+      const result = await axios.get(`http://localhost:4000/poster/details/${poster}`)
+      setData(result.data);
+    }
+    getData()
+  }, [poster]);
 
   return (
     <PosterDetailsStyle>
